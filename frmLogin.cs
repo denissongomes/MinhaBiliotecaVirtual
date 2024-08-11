@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MinhaBiliotecaVirtual
 {
-    public partial class frmRegistro : Form
+    public partial class frmLogin : Form
     {
-        public frmRegistro()
+        public frmLogin()
         {
             InitializeComponent();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
