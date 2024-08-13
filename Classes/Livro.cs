@@ -58,6 +58,7 @@ namespace MinhaBiliotecaVirtual.Classes
         {
             MySqlConnection con = new MySqlConnection(strConnetion);
             MySqlCommand cmd = new MySqlCommand("CriarLivro", con);
+
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("p_Titulo", livro.Titulo));
             cmd.Parameters.Add(new MySqlParameter("p_ISBN", livro.ISBN));
@@ -102,8 +103,40 @@ namespace MinhaBiliotecaVirtual.Classes
             return livro;
         }
 
+        public void EditarLivro(Livro livro)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(strConnetion))
+                {
+                    MySqlCommand cmd = new MySqlCommand("AtualizarLivro", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new MySqlParameter("p_LivroId", livro.LivroId));
+                    cmd.Parameters.Add(new MySqlParameter("p_Titulo", livro.Titulo));
+                    cmd.Parameters.Add(new MySqlParameter("p_ISBN", livro.ISBN));
+                    cmd.Parameters.Add(new MySqlParameter("p_EditoraNome", livro.EditoraNome));
+                    cmd.Parameters.Add(new MySqlParameter("p_AutorNome", livro.AutorNome));
+                    cmd.Parameters.Add(new MySqlParameter("p_CategoriaNome", livro.CategoriaNome));
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+
+            }
+            catch (Exception ex) 
+            {
+                throw ex;
+            }
+
+            
+            
+        }
     }
 
-    
 }
+
+    
+
 

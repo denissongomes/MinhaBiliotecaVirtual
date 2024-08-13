@@ -23,7 +23,8 @@ namespace MinhaBiliotecaVirtual.Classes
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-
+            EditarDadosDoLivro();
+            this.Close();
         }
 
         void PegarDadosDoLivro()
@@ -36,6 +37,18 @@ namespace MinhaBiliotecaVirtual.Classes
             txtEditoraNome.Text = livro.EditoraNome;
             txtAutorNome.Text = livro.AutorNome;
             txtCategoriaNome.Text = livro.CategoriaNome;
+        }
+
+        void EditarDadosDoLivro()
+        {
+            Livro livro = new Livro();
+            livro.LivroId = livroIdSelecionado;
+            livro.Titulo = txtTitulo.Text;
+            livro.ISBN = txtIsbn.Text;
+            livro.EditoraNome = txtEditoraNome.Text;
+            livro.AutorNome = txtAutorNome.Text;
+            livro.CategoriaNome = txtCategoriaNome.Text;
+            livro.EditarLivro(livro);
         }
     }
 }
