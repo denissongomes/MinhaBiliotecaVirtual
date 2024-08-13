@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridViewLivros = new System.Windows.Forms.DataGridView();
-            this.btnNovoForm = new System.Windows.Forms.Button();
+            this.btnAbrirFrmEditar = new System.Windows.Forms.Button();
+            this.btnAbrirFrmNovo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,24 +42,36 @@
             this.dataGridViewLivros.Size = new System.Drawing.Size(784, 360);
             this.dataGridViewLivros.TabIndex = 0;
             // 
-            // btnNovoForm
+            // btnAbrirFrmEditar
             // 
-            this.btnNovoForm.Location = new System.Drawing.Point(704, 400);
-            this.btnNovoForm.Name = "btnNovoForm";
-            this.btnNovoForm.Size = new System.Drawing.Size(75, 23);
-            this.btnNovoForm.TabIndex = 1;
-            this.btnNovoForm.Text = "Novo";
-            this.btnNovoForm.UseVisualStyleBackColor = true;
-            this.btnNovoForm.Click += new System.EventHandler(this.btnNovoForm_Click);
+            this.btnAbrirFrmEditar.Location = new System.Drawing.Point(720, 400);
+            this.btnAbrirFrmEditar.Name = "btnAbrirFrmEditar";
+            this.btnAbrirFrmEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnAbrirFrmEditar.TabIndex = 4;
+            this.btnAbrirFrmEditar.Text = "Editar";
+            this.btnAbrirFrmEditar.UseVisualStyleBackColor = true;
+            this.btnAbrirFrmEditar.Click += new System.EventHandler(this.btnAbrirFrmEditar_Click);
+            // 
+            // btnAbrirFrmNovo
+            // 
+            this.btnAbrirFrmNovo.Location = new System.Drawing.Point(640, 400);
+            this.btnAbrirFrmNovo.Name = "btnAbrirFrmNovo";
+            this.btnAbrirFrmNovo.Size = new System.Drawing.Size(75, 24);
+            this.btnAbrirFrmNovo.TabIndex = 5;
+            this.btnAbrirFrmNovo.Text = "Novo";
+            this.btnAbrirFrmNovo.UseVisualStyleBackColor = true;
+            this.btnAbrirFrmNovo.Click += new System.EventHandler(this.btnAbrirFrmNovo_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnNovoForm);
+            this.Controls.Add(this.btnAbrirFrmNovo);
+            this.Controls.Add(this.btnAbrirFrmEditar);
             this.Controls.Add(this.dataGridViewLivros);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minha Bilioteca Virtual";
             this.Activated += new System.EventHandler(this.frmPrincipal_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivros)).EndInit();
@@ -69,6 +82,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewLivros;
-        private System.Windows.Forms.Button btnNovoForm;
+        private System.Windows.Forms.Button btnAbrirFrmEditar;
+        private System.Windows.Forms.Button btnAbrirFrmNovo;
     }
 }

@@ -34,7 +34,7 @@ namespace MinhaBiliotecaVirtual
             Livro livro = new Livro();
 
             livro.Titulo = txtTitulo.Text;
-            livro.Isbn = txtIsbn.Text;
+            livro.ISBN = txtIsbn.Text;
             livro.EditoraNome = txtEditoraNome.Text;
             livro.AutorNome = txtAutorNome.Text;
             livro.CategoriaNome = txtCategoriaNome.Text;

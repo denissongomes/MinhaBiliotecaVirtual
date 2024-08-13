@@ -14,7 +14,7 @@ namespace MinhaBiliotecaVirtual.Classes
     {
         public int LivroId { get; set; }
         public string Titulo { get; set; }
-        public string Isbn { get; set; }
+        public string ISBN { get; set; }
         public string EditoraNome { get; set; }
         public string AutorNome { get; set; }
         public string CategoriaNome { get; set; }
@@ -27,7 +27,7 @@ namespace MinhaBiliotecaVirtual.Classes
 
             MySqlConnection con = new MySqlConnection(strConnetion);
 
-            string selectSQL = "SELECT LivroId, Titulo, EditoraNome, AutorNome, CategoriaNome FROM GetLivrosData";
+            string selectSQL = "SELECT LivroId, Titulo,ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivrosData";
 
             con.Open();
 
@@ -42,6 +42,7 @@ namespace MinhaBiliotecaVirtual.Classes
                     Livro livro = new Livro();
                     livro.LivroId = Convert.ToInt32(dr["LivroId"]);
                     livro.Titulo = dr["Titulo"].ToString();
+                    livro.ISBN = dr["ISBN"].ToString();
                     livro.EditoraNome = dr["EditoraNome"].ToString();
                     livro.AutorNome = dr["AutorNome"].ToString();
                     livro.CategoriaNome = dr["CategoriaNome"].ToString();
@@ -59,13 +60,46 @@ namespace MinhaBiliotecaVirtual.Classes
             MySqlCommand cmd = new MySqlCommand("CriarLivro", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("p_Titulo", livro.Titulo));
-            cmd.Parameters.Add(new MySqlParameter("p_ISBN", livro.Isbn));
+            cmd.Parameters.Add(new MySqlParameter("p_ISBN", livro.ISBN));
             cmd.Parameters.Add(new MySqlParameter("p_EditoraNome", livro.EditoraNome));
             cmd.Parameters.Add(new MySqlParameter("p_AutorNome", livro.AutorNome));
             cmd.Parameters.Add(new MySqlParameter("p_CategoriaNome", livro.CategoriaNome));
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+        }
+
+        public Livro GetLivros(int livroId)
+        {
+            
+            MySqlConnection con = new MySqlConnection(strConnetion);
+
+            string selectSQL = "SELECT LivroId, Titulo, ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivrosData WHERE LivroId=" + livroId;
+
+            con.Open();
+
+            MySqlCommand cmd = new MySqlCommand(selectSQL, con);
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            Livro livro = new Livro();
+
+            if (dr != null)
+            {
+                while (dr.Read())
+                {
+                    Livro lilvro = new Livro();
+                    livro.LivroId = Convert.ToInt32(dr["LivroId"]);
+                    livro.Titulo = dr["Titulo"].ToString();
+                    livro.ISBN = dr["ISBN"].ToString();
+                    livro.EditoraNome = dr["EditoraNome"].ToString();
+                    livro.AutorNome = dr["AutorNome"].ToString();
+                    livro.CategoriaNome = dr["CategoriaNome"].ToString();
+                  
+                }
+
+            }
+            return livro;
         }
 
     }

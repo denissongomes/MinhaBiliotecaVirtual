@@ -99,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Livro.cs" />
+    <Compile Include="frmEditarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarLivro.Designer.cs">
+      <DependentUpon>frmEditarLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNovoLivro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmEditarLivro.resx">
+      <DependentUpon>frmEditarLivro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNovoLivro.resx">
       <DependentUpon>frmNovoLivro.cs</DependentUpon>
     </EmbeddedResource>

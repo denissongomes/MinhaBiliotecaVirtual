@@ -160,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTitulo);
             this.Name = "frmNovoLivro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Novo Livro";
             this.ResumeLayout(false);
             this.PerformLayout();
