@@ -82,6 +82,7 @@
             this.Controls.Add(this.btnAbrirFrmNovo);
             this.Controls.Add(this.btnAbrirFrmEditar);
             this.Controls.Add(this.dataGridViewLivros);
+            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minha Bilioteca Virtual";

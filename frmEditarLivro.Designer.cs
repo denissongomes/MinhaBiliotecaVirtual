@@ -158,6 +158,7 @@
             this.Controls.Add(this.txtIsbn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTitulo);
+            this.MaximizeBox = false;
             this.Name = "frmEditarLivro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Editar Livro";
