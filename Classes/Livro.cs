@@ -7,6 +7,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace MinhaBiliotecaVirtual.Classes
 {
@@ -18,14 +19,15 @@ namespace MinhaBiliotecaVirtual.Classes
         public string EditoraNome { get; set; }
         public string AutorNome { get; set; }
         public string CategoriaNome { get; set; }
-        String strConnetion = "server=192.168.0.38;uid=root;database=Livraria;";
-
+      
+        readonly string ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+  
         public List<Livro> GetLivros()
         {
 
             List<Livro> livroList = new List<Livro>();
 
-            MySqlConnection con = new MySqlConnection(strConnetion);
+            MySqlConnection con = new MySqlConnection(ConnectionString);
 
             string selectSQL = "SELECT LivroId, Titulo,ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivrosData";
 
@@ -56,7 +58,7 @@ namespace MinhaBiliotecaVirtual.Classes
 
         public void NovoLivro(Livro livro)
         {
-            MySqlConnection con = new MySqlConnection(strConnetion);
+            MySqlConnection con = new MySqlConnection(ConnectionString);
             MySqlCommand cmd = new MySqlCommand("CriarLivro", con);
 
             cmd.CommandType = CommandType.StoredProcedure;
@@ -73,7 +75,7 @@ namespace MinhaBiliotecaVirtual.Classes
         public Livro GetLivros(int livroId)
         {
             
-            MySqlConnection con = new MySqlConnection(strConnetion);
+            MySqlConnection con = new MySqlConnection(ConnectionString);
 
             string selectSQL = "SELECT LivroId, Titulo, ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivrosData WHERE LivroId=" + livroId;
 
@@ -107,7 +109,7 @@ namespace MinhaBiliotecaVirtual.Classes
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(strConnetion))
+                using (MySqlConnection con = new MySqlConnection(ConnectionString))
                 {
                     MySqlCommand cmd = new MySqlCommand("AtualizarLivro", con);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -137,7 +139,7 @@ namespace MinhaBiliotecaVirtual.Classes
 
         public void DeletarLivro(int livroId)
         {
-            MySqlConnection con = new MySqlConnection(strConnetion);
+            MySqlConnection con = new MySqlConnection(ConnectionString);
             MySqlCommand cmd = new MySqlCommand("DeletarLivro", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new MySqlParameter("p_LivroId", livroId));
