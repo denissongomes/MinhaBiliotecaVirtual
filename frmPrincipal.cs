@@ -71,14 +71,24 @@ namespace MinhaBiliotecaVirtual
 
       void  DeletarLivro()
         {
+            // int livroId;
+            //livroId = (int)dataGridViewLivros.CurrentRow.Cells[0].Value;
+
+            //  Livro livro = new Livro();
+            //  livro.DeletarLivro(livroId);
+            //  preencherGridView();
             int livroId;
             livroId = (int)dataGridViewLivros.CurrentRow.Cells[0].Value;
 
-            Livro livro = new Livro();
-            livro.DeletarLivro(livroId);
-            preencherGridView();
+            string? livroTitulo = datagridviewBooks.CurrentRow.Cells[1].Value.ToString();
+            string message = "Are you sure that you want to delete the book '" + livroTitulo + "'?";
+            DialogResult dr = MessageBox.Show(message, "Deletar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                  Livro livro = new Livro();
+                  livro.DeletarLivro(livroId);
+                  preencherGridView();
 
-
+            }
         }
-    }
 }
