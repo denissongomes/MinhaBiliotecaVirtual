@@ -17,10 +17,11 @@ namespace MinhaBiliotecaVirtual
         public frmPrincipal()
         {
             InitializeComponent();
-            preencherGridView();
+            PreencherGridView();
+            AjustarGridView();
         }
 
-        void preencherGridView()
+        void PreencherGridView()
         {
             List<Livro> livroList = new List<Livro>();
 
@@ -28,7 +29,7 @@ namespace MinhaBiliotecaVirtual
 
             livroList = livro.GetLivros();
 
-            ; dataGridViewLivros.DataSource = livroList;
+            dataGridViewLivros.DataSource = livroList;
 
 
 
@@ -37,7 +38,7 @@ namespace MinhaBiliotecaVirtual
 
         private void frmPrincipal_Activated(object sender, System.EventArgs e)
         {
-            preencherGridView();
+            PreencherGridView();
         }
 
 
@@ -82,9 +83,26 @@ namespace MinhaBiliotecaVirtual
             {
                 Livro livro = new Livro();
                 livro.DeletarLivro(livroId);
-                preencherGridView();
+                PreencherGridView();
 
             }
+        }
+
+        void AjustarGridView()
+        {
+            dataGridViewLivros.Columns[0].HeaderText = "ID";
+            dataGridViewLivros.Columns[1].HeaderText = "Título";
+            dataGridViewLivros.Columns[2].HeaderText = "ISBN";
+            dataGridViewLivros.Columns[3].HeaderText = "Editora";
+            dataGridViewLivros.Columns[4].HeaderText = "Autor";
+            dataGridViewLivros.Columns[5].HeaderText = "Categoria";
+
+            dataGridViewLivros.Columns[0].Width = 50;
+            dataGridViewLivros.Columns[1].Width = 200;
+            dataGridViewLivros.Columns[2].Width = 90;
+            dataGridViewLivros.Columns[3].Width = 120;
+            dataGridViewLivros.Columns[4].Width = 120;
+            dataGridViewLivros.Columns[5].Width = 120;
         }
     }
 }

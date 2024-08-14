@@ -48,17 +48,18 @@
             this.btnOK.Location = new System.Drawing.Point(224, 304);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 23;
+            this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(312, 304);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -76,7 +77,7 @@
             this.txtCategoriaNome.Location = new System.Drawing.Point(24, 240);
             this.txtCategoriaNome.Name = "txtCategoriaNome";
             this.txtCategoriaNome.Size = new System.Drawing.Size(360, 20);
-            this.txtCategoriaNome.TabIndex = 20;
+            this.txtCategoriaNome.TabIndex = 4;
             // 
             // label4
             // 
@@ -92,7 +93,7 @@
             this.txtAutorNome.Location = new System.Drawing.Point(24, 192);
             this.txtAutorNome.Name = "txtAutorNome";
             this.txtAutorNome.Size = new System.Drawing.Size(360, 20);
-            this.txtAutorNome.TabIndex = 18;
+            this.txtAutorNome.TabIndex = 3;
             // 
             // label3
             // 
@@ -108,7 +109,7 @@
             this.txtEditoraNome.Location = new System.Drawing.Point(24, 144);
             this.txtEditoraNome.Name = "txtEditoraNome";
             this.txtEditoraNome.Size = new System.Drawing.Size(360, 20);
-            this.txtEditoraNome.TabIndex = 16;
+            this.txtEditoraNome.TabIndex = 2;
             // 
             // label2
             // 
@@ -124,7 +125,7 @@
             this.txtIsbn.Location = new System.Drawing.Point(24, 96);
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.Size = new System.Drawing.Size(360, 20);
-            this.txtIsbn.TabIndex = 14;
+            this.txtIsbn.TabIndex = 1;
             // 
             // label1
             // 
@@ -140,7 +141,7 @@
             this.txtTitulo.Location = new System.Drawing.Point(24, 48);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(360, 20);
-            this.txtTitulo.TabIndex = 12;
+            this.txtTitulo.TabIndex = 0;
             // 
             // frmEditarLivro
             // 

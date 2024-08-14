@@ -49,7 +49,7 @@
             this.btnAbrirFrmEditar.Location = new System.Drawing.Point(632, 400);
             this.btnAbrirFrmEditar.Name = "btnAbrirFrmEditar";
             this.btnAbrirFrmEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnAbrirFrmEditar.TabIndex = 4;
+            this.btnAbrirFrmEditar.TabIndex = 1;
             this.btnAbrirFrmEditar.Text = "Editar";
             this.btnAbrirFrmEditar.UseVisualStyleBackColor = true;
             this.btnAbrirFrmEditar.Click += new System.EventHandler(this.btnAbrirFrmEditar_Click);
@@ -59,7 +59,7 @@
             this.btnAbrirFrmNovo.Location = new System.Drawing.Point(544, 400);
             this.btnAbrirFrmNovo.Name = "btnAbrirFrmNovo";
             this.btnAbrirFrmNovo.Size = new System.Drawing.Size(75, 24);
-            this.btnAbrirFrmNovo.TabIndex = 5;
+            this.btnAbrirFrmNovo.TabIndex = 0;
             this.btnAbrirFrmNovo.Text = "Novo";
             this.btnAbrirFrmNovo.UseVisualStyleBackColor = true;
             this.btnAbrirFrmNovo.Click += new System.EventHandler(this.btnAbrirFrmNovo_Click);
@@ -69,7 +69,7 @@
             this.btnDeletarLivro.Location = new System.Drawing.Point(720, 400);
             this.btnDeletarLivro.Name = "btnDeletarLivro";
             this.btnDeletarLivro.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletarLivro.TabIndex = 6;
+            this.btnDeletarLivro.TabIndex = 2;
             this.btnDeletarLivro.Text = "Deletar";
             this.btnDeletarLivro.UseVisualStyleBackColor = true;
             this.btnDeletarLivro.Click += new System.EventHandler(this.btnDeletarLivro_Click);

@@ -73,7 +73,7 @@
             this.txtIsbn.Location = new System.Drawing.Point(24, 88);
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.Size = new System.Drawing.Size(360, 20);
-            this.txtIsbn.TabIndex = 2;
+            this.txtIsbn.TabIndex = 1;
             // 
             // label3
             // 
@@ -89,7 +89,7 @@
             this.txtEditoraNome.Location = new System.Drawing.Point(24, 136);
             this.txtEditoraNome.Name = "txtEditoraNome";
             this.txtEditoraNome.Size = new System.Drawing.Size(360, 20);
-            this.txtEditoraNome.TabIndex = 4;
+            this.txtEditoraNome.TabIndex = 2;
             // 
             // label4
             // 
@@ -105,7 +105,7 @@
             this.txtAutorNome.Location = new System.Drawing.Point(24, 184);
             this.txtAutorNome.Name = "txtAutorNome";
             this.txtAutorNome.Size = new System.Drawing.Size(360, 20);
-            this.txtAutorNome.TabIndex = 6;
+            this.txtAutorNome.TabIndex = 3;
             // 
             // label5
             // 
@@ -121,14 +121,15 @@
             this.txtCategoriaNome.Location = new System.Drawing.Point(24, 232);
             this.txtCategoriaNome.Name = "txtCategoriaNome";
             this.txtCategoriaNome.Size = new System.Drawing.Size(360, 20);
-            this.txtCategoriaNome.TabIndex = 8;
+            this.txtCategoriaNome.TabIndex = 4;
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(312, 296);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -138,7 +139,7 @@
             this.btnOK.Location = new System.Drawing.Point(224, 296);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 11;
+            this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
