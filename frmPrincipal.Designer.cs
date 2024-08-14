@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.dataGridViewLivros = new System.Windows.Forms.DataGridView();
             this.btnAbrirFrmEditar = new System.Windows.Forms.Button();
             this.btnAbrirFrmNovo = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@
             this.Controls.Add(this.btnAbrirFrmNovo);
             this.Controls.Add(this.btnAbrirFrmEditar);
             this.Controls.Add(this.dataGridViewLivros);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarLivro));
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -159,6 +160,7 @@
             this.Controls.Add(this.txtIsbn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmEditarLivro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
