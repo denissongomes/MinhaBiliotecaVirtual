@@ -22,14 +22,14 @@ namespace MinhaBiliotecaVirtual
 
         void preencherGridView()
         {
-           List<Livro> livroList = new List<Livro>();
+            List<Livro> livroList = new List<Livro>();
 
-           Livro livro = new Livro();
+            Livro livro = new Livro();
 
-           livroList = livro.GetLivros();
+            livroList = livro.GetLivros();
 
- ;         dataGridViewLivros.DataSource = livroList;
-            
+            ; dataGridViewLivros.DataSource = livroList;
+
 
 
         }
@@ -69,26 +69,22 @@ namespace MinhaBiliotecaVirtual
         }
 
 
-      void  DeletarLivro()
+        void DeletarLivro()
         {
-            // int livroId;
-            //livroId = (int)dataGridViewLivros.CurrentRow.Cells[0].Value;
-
-            //  Livro livro = new Livro();
-            //  livro.DeletarLivro(livroId);
-            //  preencherGridView();
+            
             int livroId;
             livroId = (int)dataGridViewLivros.CurrentRow.Cells[0].Value;
 
-            string? livroTitulo = datagridviewBooks.CurrentRow.Cells[1].Value.ToString();
-            string message = "Are you sure that you want to delete the book '" + livroTitulo + "'?";
+            string livroTitulo = dataGridViewLivros.CurrentRow.Cells[1].Value.ToString();
+            string message = "Tem certeza de que deseja excluir o livro: '" + livroTitulo + "'?";
             DialogResult dr = MessageBox.Show(message, "Deletar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                  Livro livro = new Livro();
-                  livro.DeletarLivro(livroId);
-                  preencherGridView();
+                Livro livro = new Livro();
+                livro.DeletarLivro(livroId);
+                preencherGridView();
 
             }
         }
+    }
 }
