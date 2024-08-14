@@ -57,10 +57,28 @@ namespace MinhaBiliotecaVirtual
         {
             int livroId;
             livroId = (int)dataGridViewLivros.CurrentRow.Cells[0].Value;
+
             frmEditarLivro formEditarLivro = new frmEditarLivro(livroId);
             formEditarLivro.ShowDialog();
 
         }
 
+        private void btnDeletarLivro_Click(object sender, EventArgs e)
+        {
+            DeletarLivro();
+        }
+
+
+      void  DeletarLivro()
+        {
+            int livroId;
+            livroId = (int)dataGridViewLivros.CurrentRow.Cells[0].Value;
+
+            Livro livro = new Livro();
+            livro.DeletarLivro(livroId);
+            preencherGridView();
+
+
+        }
     }
 }

@@ -133,6 +133,20 @@ namespace MinhaBiliotecaVirtual.Classes
             
             
         }
+
+
+        public void DeletarLivro(int livroId)
+        {
+            MySqlConnection con = new MySqlConnection(strConnetion);
+            MySqlCommand cmd = new MySqlCommand("DeletarLivro", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new MySqlParameter("p_LivroId", livroId));
+         
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
     }
 
 }
