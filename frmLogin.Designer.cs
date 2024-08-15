@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblCadastrar = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -40,21 +40,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label6
+            // lblCadastrar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label6.Location = new System.Drawing.Point(92, 466);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 19);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Cadastre-se ";
+            this.lblCadastrar.AutoSize = true;
+            this.lblCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.lblCadastrar.Location = new System.Drawing.Point(88, 466);
+            this.lblCadastrar.Name = "lblCadastrar";
+            this.lblCadastrar.Size = new System.Drawing.Size(92, 19);
+            this.lblCadastrar.TabIndex = 23;
+            this.lblCadastrar.Text = "Cadastre-se ";
+            this.lblCadastrar.Click += new System.EventHandler(this.lblCadastrar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 434);
+            this.label5.Location = new System.Drawing.Point(40, 434);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(192, 19);
             this.label5.TabIndex = 22;
@@ -161,7 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 544);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnLogin);
@@ -185,7 +186,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnLogin;

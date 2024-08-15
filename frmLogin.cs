@@ -68,5 +68,11 @@ namespace MinhaBiliotecaVirtual
              
             }
         }
+
+        private void lblCadastrar_Click(object sender, EventArgs e)
+        {
+            new frmRegistro().Show();
+            this.Hide();
+        }
     }
 }
