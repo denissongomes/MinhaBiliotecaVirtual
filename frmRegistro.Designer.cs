@@ -39,7 +39,7 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblEntre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -163,22 +163,23 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 432);
+            this.label5.Location = new System.Drawing.Point(72, 432);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Já está registrado? ";
             // 
-            // label6
+            // lblEntre
             // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label6.Location = new System.Drawing.Point(112, 464);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Entre";
+            this.lblEntre.AutoSize = true;
+            this.lblEntre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEntre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.lblEntre.Location = new System.Drawing.Point(112, 464);
+            this.lblEntre.Name = "lblEntre";
+            this.lblEntre.Size = new System.Drawing.Size(40, 17);
+            this.lblEntre.TabIndex = 11;
+            this.lblEntre.Text = "Entre";
+            this.lblEntre.Click += new System.EventHandler(this.lblEntre_Click);
             // 
             // frmRegistro
             // 
@@ -186,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 544);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblEntre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnRegister);
@@ -223,7 +224,7 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblEntre;
     }
 }
 

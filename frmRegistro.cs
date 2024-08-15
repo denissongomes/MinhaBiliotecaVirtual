@@ -79,5 +79,11 @@ namespace MinhaBiliotecaVirtual
             txtConfSenha.Text = "";
             txtUsuatio.Focus();
         }
+
+        private void lblEntre_Click(object sender, EventArgs e)
+        {
+            new frmLogin().Show();
+            this.Hide();
+        }
     }
 }
