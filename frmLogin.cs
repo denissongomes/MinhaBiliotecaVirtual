@@ -46,5 +46,12 @@ namespace MinhaBiliotecaVirtual
 
             con.Close();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtUsuatio.Text = "";
+            txtSenha.Text = "";
+            txtUsuatio.Focus();
+        }
     }
 }

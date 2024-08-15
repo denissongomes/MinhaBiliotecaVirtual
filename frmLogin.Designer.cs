@@ -30,7 +30,7 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.checkBxMostrarSenha = new System.Windows.Forms.CheckBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -60,18 +60,19 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Ainda não criou sua conta? ";
             // 
-            // button2
+            // btnLimpar
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button2.Location = new System.Drawing.Point(32, 378);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 35);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "LIMPAR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLimpar.BackColor = System.Drawing.Color.White;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnLimpar.Location = new System.Drawing.Point(32, 378);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(216, 35);
+            this.btnLimpar.TabIndex = 21;
+            this.btnLimpar.Text = "LIMPAR";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnLogin
             // 
@@ -161,7 +162,7 @@
             this.ClientSize = new System.Drawing.Size(285, 544);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.checkBxMostrarSenha);
             this.Controls.Add(this.txtSenha);
@@ -185,7 +186,7 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.CheckBox checkBxMostrarSenha;
         private System.Windows.Forms.TextBox txtSenha;
