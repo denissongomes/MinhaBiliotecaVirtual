@@ -27,7 +27,7 @@ namespace MinhaBiliotecaVirtual
         static string ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         static MySqlConnection con = new MySqlConnection(ConnectionString);
         
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBxMostrarSenha_CheckedChanged(object sender, EventArgs e)
         {
 
         }
