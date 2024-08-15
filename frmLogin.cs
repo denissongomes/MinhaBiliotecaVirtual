@@ -26,7 +26,7 @@ namespace MinhaBiliotecaVirtual
         private void btnLogin_Click(object sender, EventArgs e)
         {
             con.Open();
-            string loginSQL = "SELECT * FROM Usuários WHERE usuario='" + txtUsuatio.Text + "' AND senha='"+ txtSenha.Text + "')";
+            string loginSQL = "SELECT * FROM Usuarios WHERE usuario='" + txtUsuatio.Text + "' AND senha='"+ txtSenha.Text + "'";
             MySqlCommand cmd = new MySqlCommand(loginSQL, con);
             MySqlDataReader dr = cmd.ExecuteReader();
 

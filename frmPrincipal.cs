@@ -100,9 +100,14 @@ namespace MinhaBiliotecaVirtual
             dataGridViewLivros.Columns[0].Width = 50;
             dataGridViewLivros.Columns[1].Width = 200;
             dataGridViewLivros.Columns[2].Width = 90;
-            dataGridViewLivros.Columns[3].Width = 120;
-            dataGridViewLivros.Columns[4].Width = 120;
+            dataGridViewLivros.Columns[3].Width = 200;
+            dataGridViewLivros.Columns[4].Width = 200;
             dataGridViewLivros.Columns[5].Width = 120;
+        }
+
+        private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
         }
     }
 }

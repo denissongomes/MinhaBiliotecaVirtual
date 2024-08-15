@@ -39,14 +39,14 @@
             // dataGridViewLivros
             // 
             this.dataGridViewLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLivros.Location = new System.Drawing.Point(8, 16);
+            this.dataGridViewLivros.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewLivros.Name = "dataGridViewLivros";
-            this.dataGridViewLivros.Size = new System.Drawing.Size(784, 360);
+            this.dataGridViewLivros.Size = new System.Drawing.Size(800, 464);
             this.dataGridViewLivros.TabIndex = 0;
             // 
             // btnAbrirFrmEditar
             // 
-            this.btnAbrirFrmEditar.Location = new System.Drawing.Point(632, 400);
+            this.btnAbrirFrmEditar.Location = new System.Drawing.Point(632, 472);
             this.btnAbrirFrmEditar.Name = "btnAbrirFrmEditar";
             this.btnAbrirFrmEditar.Size = new System.Drawing.Size(75, 23);
             this.btnAbrirFrmEditar.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnAbrirFrmNovo
             // 
-            this.btnAbrirFrmNovo.Location = new System.Drawing.Point(544, 400);
+            this.btnAbrirFrmNovo.Location = new System.Drawing.Point(544, 472);
             this.btnAbrirFrmNovo.Name = "btnAbrirFrmNovo";
             this.btnAbrirFrmNovo.Size = new System.Drawing.Size(75, 24);
             this.btnAbrirFrmNovo.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             // btnDeletarLivro
             // 
-            this.btnDeletarLivro.Location = new System.Drawing.Point(720, 400);
+            this.btnDeletarLivro.Location = new System.Drawing.Point(720, 472);
             this.btnDeletarLivro.Name = "btnDeletarLivro";
             this.btnDeletarLivro.Size = new System.Drawing.Size(75, 23);
             this.btnDeletarLivro.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 505);
             this.Controls.Add(this.btnDeletarLivro);
             this.Controls.Add(this.btnAbrirFrmNovo);
             this.Controls.Add(this.btnAbrirFrmEditar);
@@ -89,6 +89,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minha Bilioteca Virtual";
             this.Activated += new System.EventHandler(this.frmPrincipal_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrincipal_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivros)).EndInit();
             this.ResumeLayout(false);
 
