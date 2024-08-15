@@ -29,7 +29,17 @@ namespace MinhaBiliotecaVirtual
         
         private void checkBxMostrarSenha_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBxMostrarSenha.Checked)
+            {
+                txtSenha.PasswordChar = '\0';
+                txtConfSenha.PasswordChar = '\0';
 
+            } 
+            else
+            {
+                txtSenha.PasswordChar = '•';
+                txtConfSenha.PasswordChar = '•';
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -46,14 +56,28 @@ namespace MinhaBiliotecaVirtual
                 MySqlCommand cmd = new MySqlCommand(registroSQL, con);
                 MySqlDataReader dr = cmd.ExecuteReader();
                 con.Close();
+
+                txtUsuatio.Text = "";
+                txtSenha.Text = "";
+                txtConfSenha.Text = "";
+
                 MessageBox.Show("Sua conta foi criada com sucesso!", "Confirmação de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } else
             {
                 MessageBox.Show("A senha não corresponde, por favor digite novamente.", "Falha no Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
                 txtSenha.Text = "";
                 txtConfSenha.Text = "";
                 txtSenha.Focus();
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtUsuatio.Text = "";
+            txtSenha.Text = "";
+            txtConfSenha.Text = "";
+            txtUsuatio.Focus();
         }
     }
 }
