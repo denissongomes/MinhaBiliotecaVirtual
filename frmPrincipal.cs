@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MinhaBiliotecaVirtual.Classes;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace MinhaBiliotecaVirtual
@@ -105,9 +106,24 @@ namespace MinhaBiliotecaVirtual
             dataGridViewLivros.Columns[5].Width = 120;
         }
 
-        private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.ExitThread();
+
+            string message = "Tem certeza que deseja sair e encerrar a aplicaçcão?";
+            DialogResult res = MessageBox.Show(message, "Sair da aplicaçcão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res != DialogResult.Yes)
+            {
+    
+                e.Cancel = true;
+                return;
+            }
+            else
+            {
+               
+                System.Windows.Forms.Application.ExitThread();
+
+            }
         }
     }
 }

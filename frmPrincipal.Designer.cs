@@ -89,7 +89,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minha Bilioteca Virtual";
             this.Activated += new System.EventHandler(this.frmPrincipal_Activated);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrincipal_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivros)).EndInit();
             this.ResumeLayout(false);
 
