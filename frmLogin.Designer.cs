@@ -100,6 +100,7 @@
             this.checkBxMostrarSenha.TabIndex = 19;
             this.checkBxMostrarSenha.Text = "Mostrar senha";
             this.checkBxMostrarSenha.UseVisualStyleBackColor = true;
+            this.checkBxMostrarSenha.CheckedChanged += new System.EventHandler(this.checkBxMostrarSenha_CheckedChanged);
             // 
             // txtSenha
             // 

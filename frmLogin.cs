@@ -53,5 +53,20 @@ namespace MinhaBiliotecaVirtual
             txtSenha.Text = "";
             txtUsuatio.Focus();
         }
+
+        private void checkBxMostrarSenha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBxMostrarSenha.Checked)
+            {
+                txtSenha.PasswordChar = '\0';
+               
+
+            }
+            else
+            {
+                txtSenha.PasswordChar = '•';
+             
+            }
+        }
     }
 }
