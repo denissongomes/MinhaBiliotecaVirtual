@@ -19,7 +19,8 @@ namespace MinhaBiliotecaVirtual.Classes
         public string EditoraNome { get; set; }
         public string AutorNome { get; set; }
         public string CategoriaNome { get; set; }
-      
+        
+        // App config 
         readonly string ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
   
         public List<Livro> GetLivros()
