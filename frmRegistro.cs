@@ -17,6 +17,10 @@ namespace MinhaBiliotecaVirtual
     public partial class frmRegistro : Form
 
     {
+
+        static string ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+        static MySqlConnection con = new MySqlConnection(ConnectionString);
+
         public frmRegistro()
         {
 
@@ -24,9 +28,7 @@ namespace MinhaBiliotecaVirtual
           
         }
 
-        static string ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
-        static MySqlConnection con = new MySqlConnection(ConnectionString);
-        
+               
         private void checkBxMostrarSenha_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBxMostrarSenha.Checked)
