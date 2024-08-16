@@ -87,5 +87,21 @@ namespace MinhaBiliotecaVirtual
             new frmLogin().Show();
             this.Hide();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            string message = "Tem certeza que deseja sair e encerrar a aplicaçcão?";
+            DialogResult res = MessageBox.Show(message, "Sair da aplicaçcão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res != DialogResult.Yes)
+            {
+                return;
+            }
+            else
+            {
+
+                System.Windows.Forms.Application.ExitThread();
+
+            }
+        }
     }
 }
