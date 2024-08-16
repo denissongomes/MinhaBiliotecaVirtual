@@ -46,38 +46,48 @@
             // 
             // btnAbrirFrmEditar
             // 
+            this.btnAbrirFrmEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnAbrirFrmEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirFrmEditar.ForeColor = System.Drawing.Color.White;
             this.btnAbrirFrmEditar.Location = new System.Drawing.Point(632, 472);
             this.btnAbrirFrmEditar.Name = "btnAbrirFrmEditar";
             this.btnAbrirFrmEditar.Size = new System.Drawing.Size(75, 23);
             this.btnAbrirFrmEditar.TabIndex = 1;
             this.btnAbrirFrmEditar.Text = "Editar";
-            this.btnAbrirFrmEditar.UseVisualStyleBackColor = true;
+            this.btnAbrirFrmEditar.UseVisualStyleBackColor = false;
             this.btnAbrirFrmEditar.Click += new System.EventHandler(this.btnAbrirFrmEditar_Click);
             // 
             // btnAbrirFrmNovo
             // 
+            this.btnAbrirFrmNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnAbrirFrmNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirFrmNovo.ForeColor = System.Drawing.Color.White;
             this.btnAbrirFrmNovo.Location = new System.Drawing.Point(544, 472);
             this.btnAbrirFrmNovo.Name = "btnAbrirFrmNovo";
             this.btnAbrirFrmNovo.Size = new System.Drawing.Size(75, 24);
             this.btnAbrirFrmNovo.TabIndex = 0;
             this.btnAbrirFrmNovo.Text = "Novo";
-            this.btnAbrirFrmNovo.UseVisualStyleBackColor = true;
+            this.btnAbrirFrmNovo.UseVisualStyleBackColor = false;
             this.btnAbrirFrmNovo.Click += new System.EventHandler(this.btnAbrirFrmNovo_Click);
             // 
             // btnDeletarLivro
             // 
+            this.btnDeletarLivro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnDeletarLivro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletarLivro.ForeColor = System.Drawing.Color.White;
             this.btnDeletarLivro.Location = new System.Drawing.Point(720, 472);
             this.btnDeletarLivro.Name = "btnDeletarLivro";
             this.btnDeletarLivro.Size = new System.Drawing.Size(75, 23);
             this.btnDeletarLivro.TabIndex = 2;
             this.btnDeletarLivro.Text = "Deletar";
-            this.btnDeletarLivro.UseVisualStyleBackColor = true;
+            this.btnDeletarLivro.UseVisualStyleBackColor = false;
             this.btnDeletarLivro.Click += new System.EventHandler(this.btnDeletarLivro_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 505);
             this.Controls.Add(this.btnDeletarLivro);
             this.Controls.Add(this.btnAbrirFrmNovo);
