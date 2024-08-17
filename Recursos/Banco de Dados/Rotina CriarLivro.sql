@@ -1,4 +1,6 @@
-CREATE DEFINER=`root`@`%` PROCEDURE `CriarLivro`(
+USE minhabiblioteca
+DELIMITER //
+CREATE PROCEDURE `CriarLivro`(
 p_Titulo varchar(50),
 p_ISBN varchar(20),
 p_EditoraNome varchar(50),
@@ -26,3 +28,6 @@ p_ISBN,
 );
 end if;
 END
+//
+
+DELIMITER ;

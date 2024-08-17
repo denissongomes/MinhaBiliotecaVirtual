@@ -1,4 +1,6 @@
-CREATE DEFINER=`root`@`%` PROCEDURE `AtualizarLivro`(
+USE minhabiblioteca
+DELIMITER //
+CREATE PROCEDURE `AtualizarLivro`(
 p_LivroId int,
 p_Titulo varchar(50),
 p_ISBN varchar(20),
@@ -7,7 +9,7 @@ p_AutorNome varchar(50),
 p_CategoriaNome varchar(50))
 BEGIN
 if not exists (select * from Categoria where CategoriaNome = p_CategoriaNome) then
-INSERT INTO Categoria (CategoriaNome) VALUES (p_CategoriaNome);
+INSERT INTO categoria (CategoriaNome) VALUES (p_CategoriaNome);
 end if;
 if not exists (select * from Autor where AutorNome = p_AutorNome) then
 INSERT INTO Autor (AutorNome) VALUES (p_AutorNome);
@@ -22,4 +24,7 @@ EditoraId = (select EditoraId from Editora where EditoraNome = p_EditoraNome),
 AutorId = (select AutorId from Autor where AutorNome = p_AutorNome),
 CategoriaId = (select CategoriaId from Categoria where CategoriaNome = p_CategoriaNome)
 WHERE LivroId = p_LivroId;
-END
+END;
+//
+
+DELIMITER ;

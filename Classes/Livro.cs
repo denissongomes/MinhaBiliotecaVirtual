@@ -30,7 +30,7 @@ namespace MinhaBiliotecaVirtual.Classes
 
             MySqlConnection con = new MySqlConnection(ConnectionString);
 
-            string selectSQL = "SELECT LivroId, Titulo,ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivrosData";
+            string selectSQL = "SELECT LivroId, Titulo,ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivroData";
 
             con.Open();
 

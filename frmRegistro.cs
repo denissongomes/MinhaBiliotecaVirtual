@@ -54,7 +54,7 @@ namespace MinhaBiliotecaVirtual
 
 
                 con.Open();
-                string registroSQL = "INSERT INTO Usuários VALUES ('"+txtUsuatio.Text+"', '"+txtSenha.Text+"')";
+                string registroSQL = "INSERT INTO usuarios VALUES ('"+txtUsuatio.Text+"', '"+txtSenha.Text+"')";
                 MySqlCommand cmd = new MySqlCommand(registroSQL, con);
                 MySqlDataReader dr = cmd.ExecuteReader();
                 con.Close();
@@ -64,6 +64,8 @@ namespace MinhaBiliotecaVirtual
                 txtConfSenha.Text = "";
 
                 MessageBox.Show("Sua conta foi criada com sucesso!", "Confirmação de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                new frmLogin().Show();
+                this.Hide();
             } else
             {
                 MessageBox.Show("A senha não corresponde, por favor digite novamente.", "Falha no Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
