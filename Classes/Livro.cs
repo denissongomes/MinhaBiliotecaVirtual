@@ -78,7 +78,7 @@ namespace MinhaBiliotecaVirtual.Classes
             
             MySqlConnection con = new MySqlConnection(ConnectionString);
 
-            string selectSQL = "SELECT LivroId, Titulo, ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivrosData WHERE LivroId=" + livroId;
+            string selectSQL = "SELECT LivroId, Titulo, ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivroData WHERE LivroId=" + livroId;
 
             con.Open();
 

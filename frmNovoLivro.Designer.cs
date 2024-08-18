@@ -41,7 +41,7 @@
             this.txtCategoriaNome = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtTitulo
@@ -153,8 +153,8 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Items.AddRange(new object[] {
             "Aventura",
             "Drama",
             "Fantasia",
@@ -167,10 +167,10 @@
             "Romance",
             "Suspense",
             "Terror"});
-            this.comboBox1.Location = new System.Drawing.Point(24, 264);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
+            this.cbCategoria.Location = new System.Drawing.Point(24, 264);
+            this.cbCategoria.Name = "comboBox1";
+            this.cbCategoria.Size = new System.Drawing.Size(360, 21);
+            this.cbCategoria.TabIndex = 10;
             // 
             // frmNovoLivro
             // 
@@ -178,7 +178,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(406, 339);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label5);
@@ -216,6 +216,6 @@
         private System.Windows.Forms.TextBox txtCategoriaNome;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCategoria;
     }
 }

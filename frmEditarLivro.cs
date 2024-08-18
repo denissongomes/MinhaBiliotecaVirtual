@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MinhaBiliotecaVirtual.Classes
 {
@@ -36,7 +37,10 @@ namespace MinhaBiliotecaVirtual.Classes
             txtIsbn.Text = livro.ISBN;
             txtEditoraNome.Text = livro.EditoraNome;
             txtAutorNome.Text = livro.AutorNome;
-            txtCategoriaNome.Text = livro.CategoriaNome;
+            // txtCategoriaNome.Text = livro.CategoriaNome;
+            cbCategoria.SelectedItem = livro.CategoriaNome;
+            cbCategoria.GetItemText(cbCategoria.SelectedItem);
+    
         }
 
         void EditarDadosDoLivro()
@@ -47,7 +51,8 @@ namespace MinhaBiliotecaVirtual.Classes
             livro.ISBN = txtIsbn.Text;
             livro.EditoraNome = txtEditoraNome.Text;
             livro.AutorNome = txtAutorNome.Text;
-            livro.CategoriaNome = txtCategoriaNome.Text;
+            // livro.CategoriaNome = txtCategoriaNome.Text;
+            livro.CategoriaNome = cbCategoria.GetItemText(cbCategoria.SelectedItem);
             livro.EditarLivro(livro);
         }
     }

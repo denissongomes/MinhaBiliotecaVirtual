@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MinhaBiliotecaVirtual.Classes;
+using MySqlX.XDevAPI.Relational;
 
 namespace MinhaBiliotecaVirtual
 {
@@ -37,7 +38,8 @@ namespace MinhaBiliotecaVirtual
             livro.ISBN = txtIsbn.Text;
             livro.EditoraNome = txtEditoraNome.Text;
             livro.AutorNome = txtAutorNome.Text;
-            livro.CategoriaNome = txtCategoriaNome.Text;
+
+            livro.CategoriaNome = cbCategoria.SelectedItem.ToString();//txtCategoriaNome.Text;
 
             livro.NovoLivro(livro);
 

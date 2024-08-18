@@ -32,7 +32,6 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCategoriaNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAutorNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.txtIsbn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnOK
@@ -77,13 +77,6 @@
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 21;
             this.label5.Text = "Categoria:";
-            // 
-            // txtCategoriaNome
-            // 
-            this.txtCategoriaNome.Location = new System.Drawing.Point(24, 232);
-            this.txtCategoriaNome.Name = "txtCategoriaNome";
-            this.txtCategoriaNome.Size = new System.Drawing.Size(360, 20);
-            this.txtCategoriaNome.TabIndex = 4;
             // 
             // label4
             // 
@@ -149,16 +142,37 @@
             this.txtTitulo.Size = new System.Drawing.Size(360, 20);
             this.txtTitulo.TabIndex = 0;
             // 
+            // cbCategoria
+            // 
+            this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Items.AddRange(new object[] {
+            "Aventura",
+            "Drama",
+            "Fantasia",
+            "Ficção Científica",
+            "História",
+            "Literatura Brasileira",
+            "Mistério",
+            "Programação",
+            "Remover ",
+            "Romance",
+            "Suspense",
+            "Terror"});
+            this.cbCategoria.Location = new System.Drawing.Point(23, 232);
+            this.cbCategoria.Name = "cbCategoria";
+            this.cbCategoria.Size = new System.Drawing.Size(360, 21);
+            this.cbCategoria.TabIndex = 22;
+            // 
             // frmEditarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(406, 339);
+            this.Controls.Add(this.cbCategoria);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCategoriaNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAutorNome);
             this.Controls.Add(this.label3);
@@ -182,7 +196,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCategoriaNome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAutorNome;
         private System.Windows.Forms.Label label3;
@@ -191,5 +204,6 @@
         private System.Windows.Forms.TextBox txtIsbn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.ComboBox cbCategoria;
     }
 }
