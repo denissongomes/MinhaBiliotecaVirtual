@@ -38,7 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtAutorNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCategoriaNome = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -117,13 +116,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Categoria:";
             // 
-            // txtCategoriaNome
-            // 
-            this.txtCategoriaNome.Location = new System.Drawing.Point(24, 232);
-            this.txtCategoriaNome.Name = "txtCategoriaNome";
-            this.txtCategoriaNome.Size = new System.Drawing.Size(360, 20);
-            this.txtCategoriaNome.TabIndex = 4;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
@@ -151,7 +143,7 @@
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // comboBox1
+            // cbCategoria
             // 
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Items.AddRange(new object[] {
@@ -167,8 +159,8 @@
             "Romance",
             "Suspense",
             "Terror"});
-            this.cbCategoria.Location = new System.Drawing.Point(24, 264);
-            this.cbCategoria.Name = "comboBox1";
+            this.cbCategoria.Location = new System.Drawing.Point(24, 232);
+            this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(360, 21);
             this.cbCategoria.TabIndex = 10;
             // 
@@ -182,7 +174,6 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCategoriaNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAutorNome);
             this.Controls.Add(this.label3);
@@ -213,7 +204,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAutorNome;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCategoriaNome;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.ComboBox cbCategoria;

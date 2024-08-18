@@ -24,8 +24,47 @@ namespace MinhaBiliotecaVirtual.Classes
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            EditarDadosDoLivro();
-            this.Close();
+
+            bool validacaoDosCampos = true;
+            foreach (Control control in this.Controls.Cast<Control>().OrderBy(c => c.TabIndex))
+            {
+               if (control is System.Windows.Forms.TextBox || control is System.Windows.Forms.ComboBox)
+               {
+                    if (string.IsNullOrWhiteSpace(control.Text))
+                    {
+                        validacaoDosCampos = false;
+                        control.BackColor = Color.IndianRed;
+                        control.Focus();
+                        MessageBox.Show("Um ou mais campos não foram preenchidos, por favor tente novamente!", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                    else if (cbCategoria.SelectedItem == null)
+                    {
+                        validacaoDosCampos = false;
+                        cbCategoria.BackColor = Color.IndianRed;
+                        cbCategoria.Focus();
+                        MessageBox.Show("O campo 'Categoria' não está selecionado, por favor tente novamente!", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+
+              }
+            }
+            if (validacaoDosCampos)
+            {
+                try
+                {
+                    //salvar
+                    EditarDadosDoLivro();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+           
         }
 
         void PegarDadosDoLivro()
