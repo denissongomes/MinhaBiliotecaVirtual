@@ -31,7 +31,7 @@ namespace MinhaBiliotecaVirtual.Classes
             // Validação de todos os controles (TextBox e ComboBox) no formulário
             foreach (Control control in this.Controls.Cast<Control>().OrderBy(c => c.TabIndex))
             {
-                if (control is TextBox || control is ComboBox)
+                if (control is System.Windows.Forms.TextBox || control is System.Windows.Forms.ComboBox)
                 {
                     if (string.IsNullOrWhiteSpace(control.Text))
                     {
