@@ -106,7 +106,7 @@
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Minha Bilioteca Virtual";
+            this.Text = "Minha Biblioteca Virtual";
             this.Activated += new System.EventHandler(this.frmPrincipal_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLivros)).EndInit();
