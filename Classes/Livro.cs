@@ -155,5 +155,55 @@ namespace MinhaBiliotecaVirtual.Classes
             cmd.ExecuteNonQuery(); // Executa a Stored Procedure
             con.Close(); // Fecha a conexão
         }
+
+        // Método para buscar livros pelo título (usando uma string parcial)
+        public List<Livro> BuscarLivros(string tituloBusca)
+        {
+            // Lista que armazenará os livros encontrados
+            List<Livro> livroList = new List<Livro>();
+
+            // Estabelece a conexão com o banco de dados
+            using (MySqlConnection con = new MySqlConnection(ConnectionString))
+            {
+                // Comando SQL com filtro para buscar livros cujo título contenha a string de busca
+                string selectSQL = "SELECT LivroId, Titulo, ISBN, EditoraNome, AutorNome, CategoriaNome FROM GetLivroData WHERE Titulo LIKE @Titulo";
+
+                // Cria um comando SQL e adiciona o parâmetro de busca
+                MySqlCommand cmd = new MySqlCommand(selectSQL, con);
+                cmd.Parameters.AddWithValue("@Titulo", "%" + tituloBusca + "%");
+
+                // Abre a conexão
+                con.Open();
+
+                // Executa o comando e obtém os dados em um MySqlDataReader
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                // Verifica se há dados retornados
+                if (dr != null)
+                {
+                    // Itera sobre os registros retornados
+                    while (dr.Read())
+                    {
+                        // Cria um objeto Livro e preenche suas propriedades com os dados do banco
+                        Livro livro = new Livro
+                        {
+                            LivroId = Convert.ToInt32(dr["LivroId"]),
+                            Titulo = dr["Titulo"].ToString(),
+                            ISBN = dr["ISBN"].ToString(),
+                            EditoraNome = dr["EditoraNome"].ToString(),
+                            AutorNome = dr["AutorNome"].ToString(),
+                            CategoriaNome = dr["CategoriaNome"].ToString()
+                        };
+
+                        // Adiciona o livro à lista
+                        livroList.Add(livro);
+                    }
+                }
+            }
+
+            // Retorna a lista de livros encontrados
+            return livroList;
+        }
+
     }
 }

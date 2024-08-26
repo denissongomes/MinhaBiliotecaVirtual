@@ -76,9 +76,10 @@ namespace MinhaBiliotecaVirtual
                 // Exibe uma mensagem confirmando o sucesso do registro.
                 MessageBox.Show("Sua conta foi criada com sucesso!", "Confirmação de registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Abre o formulário de login e oculta o formulário de registro.
-                new frmLogin().Show();
+                // Abre o formulário principal e oculta o formulário de registro.
+                new frmPrincipal().Show();
                 this.Hide();
+
             }
             else
             {

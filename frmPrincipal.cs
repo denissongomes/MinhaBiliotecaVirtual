@@ -22,7 +22,7 @@ namespace MinhaBiliotecaVirtual
             AjustarGridView(); // Ajusta a aparência e as colunas da DataGridView.
         }
 
-        // Método para preencher a DataGridView com os dados dos livros.
+        // Método para lógica de busca do livro.
         void PreencherGridView()
         {
             List<Livro> livroList = new List<Livro>(); // Cria uma lista para armazenar os livros.
@@ -32,6 +32,23 @@ namespace MinhaBiliotecaVirtual
             livroList = livro.GetLivros(); // Obtém a lista de livros a partir do método GetLivros() da classe Livro.
 
             dataGridViewLivros.DataSource = livroList; // Define a fonte de dados da DataGridView como a lista de livros.
+        }
+        void PreencherGridView(string busca = "")// Método para preencher a DataGridView com os dados dos livros.
+        {
+            List<Livro> livroList = new List<Livro>();
+
+            Livro livro = new Livro();
+
+            if (string.IsNullOrWhiteSpace(busca))
+            {
+                livroList = livro.GetLivros();
+            }
+            else
+            {
+                livroList = livro.BuscarLivros(busca);
+            }
+
+            dataGridViewLivros.DataSource = livroList;
         }
 
         // Evento acionado quando o formulário principal é ativado (quando ele ganha foco).
@@ -124,5 +141,13 @@ namespace MinhaBiliotecaVirtual
                 System.Windows.Forms.Application.ExitThread(); // Fecha a aplicação se o usuário clicar em "Yes".
             }
         }
+
+        // Evento disparado ao clicar no botão de buscar
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {   // Chama o método de busca de livros com base no título informado no TextBox de busca
+            string termoDeBusca = txtProcurar.Text;
+            PreencherGridView(termoDeBusca);
+        }
+
     }
 }

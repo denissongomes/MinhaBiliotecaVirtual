@@ -216,6 +216,7 @@
     <Content Include="Recursos\livro-novo.ico" />
     <Content Include="Recursos\livros.ico" />
     <Content Include="Recursos\splash.png" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\splash1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
