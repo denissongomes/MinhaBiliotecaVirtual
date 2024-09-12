@@ -5,7 +5,7 @@
   <img  src="https://github.com/denissongomes/MinhaBiliotecaVirtual/blob//master/Recursos/splash.png?raw=true">
 </p>
 
-"The MinhaBiliotecaVirtual (My Virtual Library) Project is part of an academic initiative"
+"The MinhaBiliotecaVirtual (My Virtual Library) project is integrated into the Visual Programming class of the Systems Analysis and Development program at the International University Center Uninter."
 
 ## Briefing
 
